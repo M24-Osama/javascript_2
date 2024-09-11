@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1.
+      function tellFortune(job, location, name, number_of_children) {
+        console.log(
+          "You will be a" +
+            job +
+            "in" +
+            location +
+            "and married to" +
+            name +
+            "with" +
+            number_of_children +
+            "kids."
+        );
+      }
+      tellFortune("software engineer", "Jordan", "Alice", 3);
+      // 2.
+      function calculateDogAge(NN) {
+        NN = NN * 7;
+        console.log("Your doggie is " + NN + " years old in dog years!");
+      }
+      calculateDogAge(1);
+      // 3.
+      function calculateSupply(age, amount) {
+        var maxAge = 100;
+        var totalNeeded = (maxAge - age) * 365 * amount;
+        console.log(
+          "You will need " +
+            totalNeeded +
+            " to last you until the ripe old age of " +
+            maxAge
+        );
+      }
+      calculateSupply(30, 3);
+      // 4.
+      function greet(name) {
+        return "Hello, " + name;
+      }
+      greet("Adam");
+      console.log(greet("Adam"));
+      /// 5.
+
+      //   function double(x) {
+      //     return 2 * x;
+      //   }
+
+      //   function double(a) {
+      //     return 2 * a;
+      //   }
+
+      //   function double(c) {
+      //     return 2 * c;
+      //   }
+      //   console.log(double(2));
+      // 6.
+      function double1(x) {
+        return 2 * x;
+      }
+
+      function double2(x) {
+        return 2 * x;
+      }
+
+      function double3(x) {
+        return 2 * x;
+      }
+      // 7.
+      function cube(x) {
+        return x * x * x;
+      }
+      console.log(cube(4));
+      // 8.
+      function multiply(x, y) {
+        return x * y;
+      }
+      console.log(multiply(3, 4));
+      console.log(multiply(5, 4));
+      // 9.
+      function canIGetADrivingLicense(age) {
+        if (age >= 20) {
+          console.log("yes you can");
+        } else {
+          age = 20 - age;
+          console.log("please come back after " + age + " years to get one");
+        }
+      }
+      canIGetADrivingLicense(21);
+      canIGetADrivingLicense(17);
+      canIGetADrivingLicense(20);
+      // 10.
+      function sameLength(str1, str2) {
+        if (str1.length === str2.length) {
+          console.log("true");
+        } else {
+          console.log("false");
+        }
+      }
+      sameLength("tree", "clue");
+      sameLength("tree", "car");
+      // 11.
+      function largerNubmer(num1, num2) {
+        if (num1 > num2) {
+          console.log(num1);
+        } else {
+          console.log(num2);
+        }
+      }
+      largerNubmer(5, 6);
+      largerNubmer(5, 3);
+      // 12.
+      function smallerNubmer(num1, num2, num3) {
+        if (num1 < num2 && num1 < num3) {
+          console.log(num1);
+        } else if (num2 < num1 && num2 < num3) {
+          console.log(num2);
+        } else {
+          console.log(num3);
+        }
+      }
+      smallerNubmer(8, 6, 7);
+      smallerNubmer(5, 99, 34);
+      smallerNubmer(5, 99, 3);
+      smallerNubmer(5, 3, 3);
+      /// 13.
+      function shorterString(str1, str2, str3, str4, str5) {
+        let s = [
+          str1.length,
+          str2.length,
+          str3.length,
+          str4.length,
+          str5.length,
+        ];
+        let st = [str1, str2, str3, str4, str5];
+        let min = str1.length;
+        let a = 0;
+        for (let i = 0; i < s.length; i++) {
+          if (s[i] < min) {
+            min = s[i];
+            a = i;
+          }
+        }
+        console.log(st[a]);
+      }
+
+      shorterString("air", "school", "car", "by", "github");
+      shorterString("by", "tr", "car", "air", "github");
+      shorterString("air", "tr", "by", "car", "github");
+      shorterString("air", "tr", "car", "github", "by");
+
+      // 14.
+      function longerString(str1, str2, str3, str4) {
+        let s = [str1.length, str2.length, str3.length, str4.length];
+        let st = [str1, str2, str3, str4];
+        let max = 0;
+        let a = 0;
+        for (let i = 0; i < s.length; i++) {
+          if (s[i] > max) {
+            max = s[i];
+            a = i;
+          }
+        }
+        console.log(st[a]);
+      }
+      longerString("air", "schoo", "car", "github");
+      // 15.
+      function isEven(num) {
+        if (num % 2 === 0) {
+          console.log("true");
+        } else {
+          console.log("false");
+        }
+      }
+      isEven(1);
+      isEven(2);
+      // 16.
+      function isOdd(num) {
+        if (num % 2 === 0) {
+          console.log("false");
+        } else {
+          console.log("true");
+        }
+      }
+      isOdd(1);
+      isOdd(2);
+    </script>
+  </body>
+</html>

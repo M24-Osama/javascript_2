@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let favoriteDrink = prompt("Enter your favorite drink:");
+
+      let price;
+      switch (favoriteDrink) {
+        case "banana":
+          price = 20;
+          break;
+        case "apple":
+          price = 15;
+          break;
+        case "orange":
+          price = 18;
+          break;
+        case "mango":
+          price = 25;
+          break;
+        case "grape":
+          price = 22;
+          break;
+        default:
+          price = "unknown";
+          break;
+      }
+
+      if (price === "unknown") {
+        console.log("Sorry, we don't have a price for that drink.");
+      } else {
+        console.log(
+          `The price of a ${favoriteDrink} drink is ${price} dollars.`
+        );
+      }
+    </script>
+  </body>
+</html>

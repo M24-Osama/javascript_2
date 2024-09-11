@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //.17
+      function positive(num) {
+        if (num >= 0) {
+          console.log(num);
+        } else {
+          console.log(num * -1);
+        }
+      }
+      positive(4);
+      positive(-5);
+
+      //.18
+      function fullName(firstName, lastName) {
+        console.log(firstName + " " + lastName);
+      }
+      fullName("Adam", "McCallen");
+      fullName("Alex", "Mercer");
+
+      //.19
+      function average(a, b, c, d, e) {
+        console.log((a + b + c + d + e) / 5);
+      }
+      average(1, 2, 3, 4, 5);
+      average(5, 7, 9, 3, 5);
+
+      //.20 ask for this one
+      function randomNumber() {
+        const seed = Date.now() % 1000;
+        const a = 1664525;
+        const c = 1013904223;
+        const m = 2 ** 32;
+        let state = seed;
+        state = (a * state + c) % m;
+
+        return state / m;
+
+        // return Math.random();
+      }
+      console.log(randomNumber());
+      console.log(randomNumber());
+
+      //.21
+      function randomBetweenNumbers(min, max) {
+        console.log(Math.floor(randomNumber() * (max - min + 1) + min));
+      }
+      randomBetweenNumbers(1, 8);
+      randomBetweenNumbers(3, 100);
+
+      //.22
+      function scoreInUniversity(score) {
+        if (score >= 95 && score <= 100) {
+          return "A";
+        } else if (score >= 85 && score < 95) {
+          return "B";
+        } else if (score >= 70 && score < 85) {
+          return "C";
+        } else if (score >= 50 && score < 70) {
+          return "D";
+        } else if (score >= 0 && score < 50) {
+          return "F";
+        } else {
+          return "Invalid score";
+        }
+      }
+      console.log(scoreInUniversity(96));
+      console.log(scoreInUniversity(3));
+      console.log(scoreInUniversity(71));
+
+      //.23
+      let count = 0;
+      function createCounter() {
+        count += 1;
+        return count;
+      }
+      console.log(createCounter());
+      console.log(createCounter());
+      console.log(createCounter());
+
+      // .24
+      function resetCounter() {
+        let previousCount = count;
+        count = 0;
+        return `${previousCount} and the counter reset now`;
+      }
+      console.log(resetCounter());
+      console.log(createCounter());
+      console.log(createCounter());
+      console.log(resetCounter());
+      console.log(createCounter());
+    </script>
+  </body>
+</html>
